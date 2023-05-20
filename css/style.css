@@ -1,0 +1,154 @@
+/* Base HTML Styles */
+
+
+:root {
+	--orange: #fb9b24;
+	--yellow: #f4d040;
+	--green: #57d68d;
+	--blue: #0c00ff;
+	--black: #111111;
+	--gray: #c3c3c3;
+}
+
+/* CSS Reset */
+
+html {
+	box-sizing: border-box;
+	font-size: 16px;
+	font-family: Helvetica, Arial, sans-serif;
+	color: var(--blue);
+	scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Global styles  */
+
+label, input, textarea, select {
+    display: block;
+    width: 100%;
+}
+
+input, select, textarea {
+    padding: 8px;
+}
+
+/* Background */
+
+body {
+	background-color: var(--orange);
+}
+
+/* Header */
+
+header {
+	font-size: 10px;
+}
+
+#navigation {
+	font-size: 15px;
+}
+
+header {
+	height: 115px;
+}
+
+nav {
+	float: right;
+}
+
+/* hero */
+
+#hero {
+	padding: 24px;
+	font-size: 3rem;
+	margin-top: 20px;
+}
+
+/* About Me */
+
+#aboutme {
+	padding: 24px;
+	margin-top: 100px;
+}
+
+.photo {
+	padding: 2%;
+	float: right;
+}
+
+.photo p {
+	padding-top: 15px;
+}
+
+/* Projects  */
+
+.articles {
+	width: auto;
+	display: flex;
+	flex-direction: column;
+	padding: 16px;
+	align-items: center;
+	margin: 15%;
+	background-color: var(--blue);
+	color: var(--orange);
+	border-radius: 5%;
+}
+
+.articles h2 {
+	padding: 16px 0px;
+}
+
+.articles img {
+	width: 40%;
+}
+
+@media (min-width: 768px){
+    #projects {
+        display: flex;
+		padding: 5%;
+}
+}
+
+@media (min-width: 768px){
+    #projects .articles {
+        display: flex;
+		margin: 2%;
+}
+}
+
