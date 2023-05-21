@@ -185,18 +185,26 @@ li {
 
 /* myself */
 
-#myself img {
-	width: 10%;
+.linkstome {
+	padding: 24px;
+	display: flex;
+	margin-left: 15%;
 }
 
-#myself a {
-	padding: 8px;
-	margin: 1%;
+.linkstome img {
+	width: 50%;
+}
+
+.linkstome a {
+	display: flex;
+	align-items: center;
 }
 
 @media (min-width: 768px){
-    #myself img {
-		width: 5%;
+    .linkstome {
+		width: 30%;
+		display: flex;
+		margin-left: 38%;
 }
 }
 
