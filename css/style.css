@@ -3,8 +3,8 @@
 
 :root {
 	--orange: #fb9b24;
-	--yellow: #f4d040;
-	--green: #57d68d;
+	--lightblue: #B7E3E4;
+	--red: #F03F35;
 	--blue: #0c00ff;
 	--black: #111111;
 	--gray: #c3c3c3;
@@ -16,7 +16,7 @@ html {
 	box-sizing: border-box;
 	font-size: 16px;
 	font-family: Helvetica, Arial, sans-serif;
-	color: var(--blue);
+	color: var(--red);
 	scroll-behavior: smooth;
 }
 
@@ -71,25 +71,30 @@ input, select, textarea {
 /* Background */
 
 body {
-	background-color: var(--orange);
+	background-color: var(--lightblue);
 }
 
 /* Header */
 
-header {
-	font-size: 10px;
+header h1 {
+	padding: 8px;
 }
 
-#navigation {
-	font-size: 15px;
-}
-
-header {
-	height: 115px;
-}
-
-nav {
+nav a {
+    text-decoration: none;
+	font-weight: bold;
+    color: var(--red);
 	float: right;
+	padding: 16px;
+}
+
+header {
+	background-color: white;
+	height: 50px;
+}
+
+li {
+	display: inline;
 }
 
 /* hero */
@@ -97,7 +102,8 @@ nav {
 #hero {
 	padding: 24px;
 	font-size: 3rem;
-	margin-top: 20px;
+	color: var(--red);
+	margin-top: 90px;
 }
 
 /* About Me */
@@ -105,15 +111,31 @@ nav {
 #aboutme {
 	padding: 24px;
 	margin-top: 100px;
+	background-color: white;
 }
 
-.photo {
+.photoofme {
 	padding: 2%;
 	float: right;
+	width: auto;
+	max-height: 100%;
+}
+
+@media (min-width: 768px){
+    .photoofme {
+        width: 25%;
+		height: 25%;
+}
 }
 
 .photo p {
 	padding-top: 15px;
+}
+
+@media (min-width: 768px){
+    #aboutme {
+        padding-bottom: 10%;
+}
 }
 
 /* Projects  */
@@ -123,19 +145,27 @@ nav {
 	display: flex;
 	flex-direction: column;
 	padding: 16px;
-	align-items: center;
 	margin: 15%;
-	background-color: var(--blue);
-	color: var(--orange);
-	border-radius: 5%;
+	align-items: center;
+	background-color: var(--red);
+	border-color: var(--red);
+	border-radius: 3%;
+	color: white;
+	text-align: center;
 }
 
 .articles h2 {
-	padding: 16px 0px;
+	padding: 16px;
+	padding-top: 16px;
+}
+
+.articles p {
+	padding: 8px;
 }
 
 .articles img {
-	width: 40%;
+	width: 20%;
+	height: auto;
 }
 
 @media (min-width: 768px){
@@ -149,6 +179,66 @@ nav {
     #projects .articles {
         display: flex;
 		margin: 2%;
+		width: 100%;
 }
 }
 
+/* myself */
+
+#myself img {
+	width: 10%;
+}
+
+#myself a {
+	padding: 8px;
+	margin: 1%;
+}
+
+@media (min-width: 768px){
+    #myself img {
+		width: 5%;
+}
+}
+
+footer {
+    padding: 16px;
+    text-align: center;
+}
+
+/* contact */
+
+#contact {
+    padding: 48px 16px;
+}
+
+#contact input, #contact select {
+    margin-bottom: 16px;
+}
+
+#contact h2 {
+    margin-bottom: 16px;
+}
+
+#contact p {
+	text-align: center;
+	font-weight: bold;
+}
+
+@media (min-width: 768px){
+    #contact h2 {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    #contact form {
+        max-width: 60%;
+        margin: 40px auto;
+    }
+}
+
+#contact input[type="submit"]{
+    background-color: var(--pink);
+    border: 0;
+    margin-top: 8px;
+    cursor: pointer;
+}
