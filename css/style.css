@@ -5,8 +5,8 @@
 	--orange: #fb9b24;
 	--lightblue: #B7E3E4;
 	--red: #F03F35;
-	--blue: #0c00ff;
 	--black: #111111;
+	--blue: #E4F6F8;
 	--gray: #c3c3c3;
 }
 
@@ -16,7 +16,7 @@ html {
 	box-sizing: border-box;
 	font-size: 16px;
 	font-family: Helvetica, Arial, sans-serif;
-	color: var(--red);
+	color: var(--black);
 	scroll-behavior: smooth;
 }
 
@@ -68,16 +68,18 @@ input, select, textarea {
     padding: 8px;
 }
 
-/* Background */
-
-body {
-	background-color: var(--lightblue);
-}
-
 /* Header */
 
-header h1 {
-	padding: 8px;
+header {
+	background-color: white;
+	margin-top: 30px;
+}
+
+header h1 a img {
+	padding: 16px;
+	height: 100px;
+	width: 100px;
+	margin-left: 20px;
 }
 
 nav a {
@@ -85,40 +87,38 @@ nav a {
 	font-weight: bold;
     color: var(--red);
 	float: right;
-	padding: 16px;
+	padding: 20px;
+	margin-top: 20px;
+	margin-right: 20px;
 }
 
-header {
-	background-color: white;
-	height: 50px;
+/* Homepage */
+
+#intro {
+    background-color: var(--blue);
+    padding: 20px; 
+	overflow: hidden;
 }
 
-li {
-	display: inline;
+#intro img {
+	width: 600px;
+	float: left;
+	margin-right: 20px;
+	margin-left: 15px;
 }
 
-/* hero */
-
-#hero {
-	padding: 24px;
-	font-size: 3rem;
-	color: var(--red);
-	margin-top: 90px;
+#intro h2 {
+	margin-top: 30px;
+    color: var(--red);
+    font-size: 24px; 
+	display: inline-block;
 }
 
-/* About Me */
-
-#aboutme {
-	padding: 24px;
-	margin-top: 100px;
-	background-color: white;
-}
-
-.photoofme {
-	padding: 2%;
-	float: right;
-	width: auto;
-	max-height: 100%;
+#intro h3 {
+    color: var(--red);
+    font-size: 24px; 
+	font-size: 15px;
+	margin-top: 10px;
 }
 
 @media (min-width: 768px){
@@ -128,14 +128,25 @@ li {
 }
 }
 
-.photo p {
-	padding-top: 15px;
-}
-
 @media (min-width: 768px){
     #aboutme {
         padding-bottom: 10%;
 }
+}
+
+#projectslink {
+	border: 2px solid var(--red);
+	padding: 10px;
+	display: block;
+	margin: 20px 50px;
+	text-align: center;
+}
+
+#projectslink a {
+	text-decoration: none;
+	color: var(--red);
+	font-weight: bold;
+	font-size: 24px;
 }
 
 /* Projects  */
@@ -185,26 +196,22 @@ li {
 
 /* myself */
 
-.linkstome {
+#myself {
 	padding: 24px;
-	display: flex;
-	margin-left: 15%;
+	background-color: var(--blue);
+	text-align: center;
 }
 
-.linkstome img {
-	width: 50%;
+#myself img {
+	width: 3%;
+	display: inline-block;
+	margin-right: 10px;
+	vertical-align: middle;
 }
 
-.linkstome a {
-	display: flex;
-	align-items: center;
-}
-
-@media (min-width: 768px){
-    .linkstome {
-		width: 30%;
-		display: flex;
-		margin-left: 38%;
+@media (max-width: 768px){
+    #myself img {
+		width: 10%;
 }
 }
 
